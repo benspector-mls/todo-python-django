@@ -32,21 +32,34 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-3. Configure PostgreSQL database:
-- Create a database named 'todo_db'
-- Update `DATABASE` settings in `todo_backend/settings.py` if needed
+3. Set up environment variables:
+   - Create a `.env` file in the root directory
+   - Add the following variables:
 
-4. Run migrations:
+    ```bash
+    DEBUG=True
+    SECRET_KEY=your-secret-key-here
+    DB_NAME=todo_db
+    DB_USER=your-db-username
+    DB_PASSWORD=your-db-password
+    DB_HOST=localhost
+    DB_PORT=5432
+    ```
+
+4. Configure PostgreSQL database:
+- Create a database named 'todo_db'
+
+5. Run migrations:
 ```bash
 python manage.py migrate
 ```
 
-5. Create a superuser (optional):
+6. Create a superuser (optional):
 ```bash
 python manage.py createsuperuser
 ```
 
-6. Start the Django development server:
+7. Start the Django development server:
 ```bash
 python manage.py runserver
 ```
