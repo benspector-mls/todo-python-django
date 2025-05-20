@@ -23,7 +23,7 @@ todo_python_project/
 
 1. Create and activate a virtual environment:
 ```bash
-python -m venv venv
+python -m venv venv # You may need to use python3 on MacOS
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
@@ -43,10 +43,11 @@ pip install -r requirements.txt
     DB_USER=your-db-username
     DB_PASSWORD=your-db-password
     DB_HOST=localhost
-    DB_PORT=5432
+    DB_PORT=your-postgres-port-probably-5432
     ```
 
 4. Configure PostgreSQL database:
+- Make sure your PostgreSQL server is running on the port listed above
 - Create a database named 'todo_db'
 
 5. Run migrations:
@@ -70,7 +71,7 @@ The backend API will be available at `http://localhost:8000`
 
 1. Navigate to the frontend directory:
 ```bash
-cd todo-frontend
+cd frontend
 ```
 
 2. Install dependencies:
@@ -117,7 +118,6 @@ The frontend will be available at `http://localhost:5173`
 
 ## Development
 
-- Backend API documentation is available at `http://localhost:8000/api/docs/`
 - Django admin interface is available at `http://localhost:8000/admin/`
 
 ## License
